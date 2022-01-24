@@ -1,3 +1,22 @@
+/* FONTS */
+@font-face {
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+       url('../fonts/spartan-v7-latin-500.woff2') format('woff2'),
+       url('../fonts/spartan-v7-latin-500.woff') format('woff');
+}
+@font-face {
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+       url('../fonts/spartan-v7-latin-700.woff2') format('woff2'),
+       url('../fonts/spartan-v7-latin-700.woff') format('woff');
+}
 /* GLOBAL */
 html{
   box-sizing: border-box;
@@ -13,10 +32,11 @@ body{
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family:"Spartan","Arial", sans-serif;
   font-size: 16px;
+  font-weight: 700;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: #EFFAFA;
   color: #000;
 }
 img{
@@ -24,7 +44,15 @@ img{
   height: auto;
   object-fit: cover;
 }
-
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 /* CONTAINER  */
 .container{
   width: 100%;
@@ -38,4 +66,137 @@ img{
 /* MAIN CONTENT  */
 .main-content{
   flex-grow: 1;
+  padding-top: 235px;
+  padding-bottom: 76px;
+  background-image: url("../imgs/header-bg.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+/* JOB-LISTINGS-ITEM */
+.job-listings-item {
+  margin-bottom: 24px;
+  padding: 32px 40px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+  border-radius: 5px;
+  border-left: 5px solid #fff;
+}
+.job-listings-item:nth-child(1),.job-listings-item:nth-child(2){
+  border-left: 5px solid #5CA5A5;
+}
+.job-listings-item-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.job-listings-item-inner-left {
+  display: flex;
+}
+.job-listings-item-logo {
+  margin-right: 24px;
+  width: 88px;
+  height: 88px;
+}
+.company-name {
+  margin-right: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5CA5A5;
+}
+.other-information {
+  margin-right: 8px;
+  padding: 6px 8px 4px 8px;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: -0.0846154px;
+  text-transform: uppercase;
+  background-color: #5CA5A5;
+  border-radius: 12px;
+  color: #FFFFFF;
+}
+.about-company {
+  padding: 6px 8px 4px 8px;
+  font-size: 11px;
+  line-height: 14px;
+  letter-spacing: -0.0846154px;
+  text-transform: uppercase;
+  background-color: #2B3939;
+  border-radius: 12px;
+  color: #FFFFFF;
+}
+.job-listings-item-heading {
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.job-listings-item-heading-link {
+  font-size: 18px;
+  line-height: 24px;
+  color: #2B3939;
+  text-decoration: none;
+  transition: color 0.4s ease,opacity 0.4s ease;
+}
+.job-listings-item-heading-link:hover{
+  color: #5CA5A5;
+}
+.job-listings-item-heading-link:active{
+  opacity: 0.4;
+}
+.about-work-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.about-work-item {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: -0.115385px;
+  color: #7C8F8F;
+}
+.about-work-item:not(:last-child){
+  margin-right: 16px;
+}
+.about-work-item:not(:first-child){
+  display: flex;
+  align-items: center;
+}
+.about-work-item:not(:first-child)::before{
+  margin-right: 16px;
+  content: " ";
+  width: 4px;
+  height: 4px;
+  background-color: #B7C4C4;
+  border-radius:50%;
+}
+.requirements-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.requirements-item:not(:last-child){
+  margin-right: 16px;
+}
+.requirements-item-link {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  color: #5CA5A5;
+  text-decoration: none;
+  background-color: rgba(92, 165, 165,0.1);
+  border-radius: 4px;
+  mix-blend-mode: normal;
+  transition: color 0.4s ease, background-color 0.4s ease, opacity 0.4s ease;
+  white-space: nowrap;
+}
+.requirements-item-link:hover{
+  color: #FFFFFF;
+  background-color: #5CA5A5;
+}
+.requirements-item-link:active{
+  opacity: 0.4;
 }
