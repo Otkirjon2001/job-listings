@@ -62,16 +62,20 @@ img{
   margin-right: auto;
   margin-left: auto;
 }
-
+/* SITE-HEADER */
+.site-header{
+  min-height: 156px;
+  background-color: #5CA5A5;
+  background-image: url("../imgs/header-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 /* MAIN CONTENT  */
 .main-content{
   flex-grow: 1;
-  padding-top: 235px;
-  padding-bottom: 76px;
-  background-image: url("../imgs/header-bg.svg");
-  background-repeat: no-repeat;
-  background-position: top center;
-}
+  padding-top: 76px;
+  padding-bottom: 120px;
+  }
 /* JOB-LISTINGS-ITEM */
 .job-listings-item {
   margin-bottom: 24px;
