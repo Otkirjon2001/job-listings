@@ -1,11 +1,15 @@
+/* CUSTOM-PROPERTY */
+:root{
+  --primary-color: #5CA5A5;
+  --font-color: #fff;
+}
 /* FONTS */
 @font-face {
   font-family: 'Spartan';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src:
-       url('../fonts/spartan-v7-latin-500.woff2') format('woff2'),
+  src: url('../fonts/spartan-v7-latin-500.woff2') format('woff2'),
        url('../fonts/spartan-v7-latin-500.woff') format('woff');
 }
 @font-face {
@@ -13,8 +17,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src:
-       url('../fonts/spartan-v7-latin-700.woff2') format('woff2'),
+  src: url('../fonts/spartan-v7-latin-700.woff2') format('woff2'),
        url('../fonts/spartan-v7-latin-700.woff') format('woff');
 }
 /* GLOBAL */
@@ -22,6 +25,7 @@ html{
   box-sizing: border-box;
   height: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 *,*::after,*::before{
   box-sizing: border-box;
@@ -36,8 +40,8 @@ body{
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
-  background-color: #EFFAFA;
   color: #000;
+  background-color: #EFFAFA;
 }
 img{
   max-width: 100%;
@@ -55,8 +59,8 @@ img{
 }
 /* CONTAINER  */
 .container{
-  width: 100%;
   max-width: 1200px;
+  width: 100%;
   padding-right: 50px;
   padding-left: 50px;
   margin-right: auto;
@@ -65,7 +69,7 @@ img{
 /* SITE-HEADER */
 .site-header{
   min-height: 156px;
-  background-color: #5CA5A5;
+  background-color: var(--primary-color);
   background-image: url("../imgs/header-bg.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -80,13 +84,13 @@ img{
 .job-listings-item {
   margin-bottom: 24px;
   padding: 32px 40px;
-  background-color: #FFFFFF;
-  box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
   border-radius: 5px;
-  border-left: 5px solid #fff;
+  border-left: 5px solid var(--font-color);
+  background-color: var(--font-color);
+  box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
 }
-.job-listings-item:nth-child(1),.job-listings-item:nth-child(2){
-  border-left: 5px solid #5CA5A5;
+.job-listings-item:nth-child(2), .job-listings-item:nth-child(3){
+  border-left: 5px solid var(--primary-color);
 }
 .job-listings-item-inner {
   display: flex;
@@ -105,7 +109,7 @@ img{
   margin-right: 16px;
   font-size: 14px;
   line-height: 16px;
-  color: #5CA5A5;
+  color: var(--primary-color);
 }
 .other-information {
   margin-right: 8px;
@@ -113,20 +117,20 @@ img{
   font-size: 11px;
   line-height: 14px;
   letter-spacing: -0.0846154px;
-  text-transform: uppercase;
-  background-color: #5CA5A5;
   border-radius: 12px;
-  color: #FFFFFF;
+  color: var(--font-color);
+  background-color: var(--primary-color);
+  text-transform: uppercase;
 }
 .about-company {
   padding: 6px 8px 4px 8px;
   font-size: 11px;
   line-height: 14px;
   letter-spacing: -0.0846154px;
-  text-transform: uppercase;
-  background-color: #2B3939;
   border-radius: 12px;
-  color: #FFFFFF;
+  color: var(--font-color);
+  background-color: #2B3939;
+  text-transform: uppercase;
 }
 .job-listings-item-heading {
   margin: 0;
@@ -137,11 +141,11 @@ img{
   font-size: 18px;
   line-height: 24px;
   color: #2B3939;
-  text-decoration: none;
   transition: color 0.4s ease,opacity 0.4s ease;
+  text-decoration: none;
 }
 .job-listings-item-heading-link:hover{
-  color: #5CA5A5;
+  color: var(--primary-color);
 }
 .job-listings-item-heading-link:active{
   opacity: 0.4;
@@ -167,12 +171,12 @@ img{
   align-items: center;
 }
 .about-work-item:not(:first-child)::before{
-  margin-right: 16px;
   content: " ";
   width: 4px;
   height: 4px;
-  background-color: #B7C4C4;
+  margin-right: 16px;
   border-radius:50%;
+  background-color: #B7C4C4;
 }
 .requirements-list {
   display: flex;
@@ -189,17 +193,17 @@ img{
   font-size: 13px;
   line-height: 24px;
   letter-spacing: -0.1px;
-  color: #5CA5A5;
+  border-radius: 4px;
+  color: var(--primary-color);
   text-decoration: none;
   background-color: rgba(92, 165, 165,0.1);
-  border-radius: 4px;
   mix-blend-mode: normal;
   transition: color 0.4s ease, background-color 0.4s ease, opacity 0.4s ease;
   white-space: nowrap;
 }
 .requirements-item-link:hover{
-  color: #FFFFFF;
-  background-color: #5CA5A5;
+  color: var(--font-color);
+  background-color: var(--primary-color);
 }
 .requirements-item-link:active{
   opacity: 0.4;
